@@ -53,10 +53,8 @@ const encodeToMorse = word => {
 const countMorse = words => {
   const store = new Set();
 
-  for (let i = 0; i < words.length; i++) {
-    store.add(encodeToMorse(words[i]));
-  }
+  words.forEach(word => store.add(encodeToMorse(word)));
 
-  return store;
+  return store.size;
 };
 ```
