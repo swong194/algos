@@ -30,6 +30,12 @@ We can use the JS .reverse method on each subarray and then go through each suba
 
 For each subarray we can reverse it and invert under one custom operation. This would result in a linear time complexity as we are not changing array size, only the value at each index.
 
+Time Complexity `O(n)`
+
+- where n is the sum of the length of each sub array
+
+Space Complexity `O(1)` as we will do the manipulation in place.
+
 # Code
 
 ```JS
@@ -49,7 +55,8 @@ const helperFlipAndInvert = arr => {
   }
 
   if (arr.length % 2 !== 0) {
-
+    const mid = Math.floor(arr.length / 2);
+    arr[mid] = arr[mid] === 1 ? 0 : 1;
   }
 };
 

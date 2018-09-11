@@ -24,6 +24,12 @@ Explanation: The robot moves left twice. It ends up two "moves" to the left of t
 # Thoughts
 Since the vertical directions are complimentary and the horizontal directions are complimentary. We can keep track of the number of times the robot moves in each direction specifically. If the robot moves up the same amount of times it moves down then it has made no movement in the vertical direction. If the robot moves the same amount of times left and right then it has made no movement in the horizontal direction. If Both conditions are true then the robot has returned to its origin.
 
+Time Complexity `O(n)`
+
+- Where n is the length of moves
+
+Space Complexity `O(1)`
+
 # Code
 ```JS
 const atOrigin = moves => {

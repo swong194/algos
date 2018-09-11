@@ -34,6 +34,14 @@ words[i] will only consist of lowercase letters.
 # Thoughts
 Using a set here will be useful in seeing how many unique transformations we have. After we convert all the words into their morse code counterparts, we can just return the size of the set for the unique transformations. We can extract the conversion of a word to morse code as a helper function.
 
+Time Complexity `O(n)`
+
+- Where n is the sum of the length of all the strings in the input
+
+Space Complexity `O(n)`
+
+- Where n is the length of the input array. In the worse case our set would store every encoded version of a word
+
 # Code
 
 ```JS

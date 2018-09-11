@@ -24,6 +24,12 @@ The above arrows point to positions where the corresponding bits are different.
 
 We can XOR between the two integers and then convert the resulting number to binary. Wherever there is a "1" we know that the corresponding bits were different, since XOR between a 0 and 1 results in a 1. We can iterate through the binary conversion and count how many 1's to get the number of positions the bits were different between x and y.
 
+Time Complexity `O(n)` 
+
+- where n is the length of the binary representation of the XOR between our inputs
+
+Space Complexity `O(1)` 
+
 # Code 
 
 ```JS

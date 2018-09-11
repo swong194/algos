@@ -29,6 +29,11 @@ A optimization could be iterating through J first and storing the letters in a s
 
 However, using indexOf seems to be more efficient then creating a set. This is most likely due to its implementation under the hood.
 
+Time Complexity `O(n + m)`
+
+- Where n is the length of S and m is the length of J
+
+Space Complexity `O(1)`
 
 # Code
 
