@@ -39,27 +39,22 @@ Time Complexity `O(n)`
 
 ```JS
 const maxStock = stockArr => {
-  // no profit, or throw error cause stock market invalid
+  // 0 profit, or throw error cause stock market invalid
   if (stockArr.length < 2) return 0;
 
   // initialize with the first buy possible
   let buyPrice = stockArr[0];
-  let sellPrice = stockArr[1];
-  let maxProfit = sellPrice - buyPrice;
+  let maxProfit = stockArr[1] - buyPrice;
 
   for (let i = 1; i < stockArr.length; i++) {
     const nowPrice = stockArr[i];
 
-    if (nowPrice > sellPrice) {
-      sellPrice = nowPrice;
-    } else if (nowPrice < buyPrice) {
+    if (nowPrice < buyPrice) {
       buyPrice = nowPrice;
-      i++
-      sellPrice = stockArr[i];
+    } else {
+      const profit = nowPrice - buyPrice;
+      if (profit > maxProfit) maxProfit = profit;
     }
-
-    const profit = sellPrice - buyPrice;
-    if (profit > maxProfit) maxProfit = profit;
   }
 
   return maxProfit;
